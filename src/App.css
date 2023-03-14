@@ -1,0 +1,75 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btnauth{
+  background-color: rgb(65, 62, 233);
+border: none;
+}
+
+
+.btnauth:hover{
+  background-color: rgb(199, 16, 16);
+  
+  border: none;
+}
+
+.btnroom{
+  background-color: rgb(65, 62, 233);
+border: none;
+}
+
+
+.btnroom:hover{
+ background-color: rgb(199, 16, 16);
+ border: none;
+ 
+}
+.chatForm{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(232, 233, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.chatForm input{
+  width: 80%;
+outline: none;
+border: none;
+}
+.chatForm button{
+  width: 15%;
+  background-color: rgb(27, 75, 207);
+  color: white;
+}
+.msgs-room{
+  background-color: rgba(213, 214, 214, 0.295);
+  
+}
+
+.msgsList {
+  width: 100%;
+  height: 90%;
+  background-color: aqua;
+  overflow-y: scroll;
+  
+}
+.msgsList img {
+  width: 10%;
+}
+.msgsList p {
+  }
+p{
+  margin: 0;
+}
+
+.user2msg{
+  background-color: rgb(233, 238, 238);
+  color: black;
+}
