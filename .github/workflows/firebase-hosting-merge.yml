@@ -13,9 +13,9 @@ jobs:
       - name: Checkout
       - uses: actions/checkout@v2
       - name: Install Depend..s
-        run: npm inatall
+      - run: npm inatall
       - name: Build
-        run: npm run build
+      - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
