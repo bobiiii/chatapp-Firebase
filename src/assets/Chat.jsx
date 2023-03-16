@@ -15,7 +15,7 @@ function Chat(props) {
     // console.log("before map "+userId)
     // console.log("before map "+userData.email)
     const userID = localStorage.getItem("userID")
-    console.log("userid cvar from LS "+userID)
+    
 
 useEffect(()=>{
     setTimeout(()=>{
@@ -55,10 +55,10 @@ useEffect(()=>{
         setNewMessages("")
 }
   return (
-    <div className='d-flex justify-content-center align-items-center bg-dark'>
-    <div className='d-flex vh-100 flex-column bg-light align-items-center' >
+    <div className='main d-flex justify-content-center align-items-center bg-dark'>
+    <div className=' chatbox d-flex vh-100 flex-column bg-light align-items-center' >
         <div className='msgs-room px-2 rounded-2 border-bottom'>
-        <h4 className=''>Welcome to Room: {room.toUpperCase()}</h4>
+        <h5 className=''>Welcome to Room: {room.toUpperCase()}</h5>
         </div>
         <div className='msgsList bg-light w-100' >
         {messages.map((message )=>{
@@ -83,10 +83,10 @@ useEffect(()=>{
         
 <div ref={forView} className='forView'></div>
         </div>
-        <div className='w-100 chatForm' >
-        <form onSubmit={handleSubmit}>
-            <input className='px-2 py-1  rounded-3' onChange={(e)=>{setNewMessages(e.target.value)}} value={newMessages} placeholder='Type your message'/>
-            <button className='px-1 border border-primary rounded-3' type='submit'>Send</button>
+        <div className='chatForm' >
+        <form className='w-100' onSubmit={handleSubmit}>
+            <input className='w-75  px-2 py-1  rounded-3' onChange={(e)=>{setNewMessages(e.target.value)}} value={newMessages} placeholder='Type your message'/>
+            <button className='w-25 px-1 py-1 border border-primary rounded-3' type='submit'>Send</button>
         </form>
         </div>
     </div> </div>
