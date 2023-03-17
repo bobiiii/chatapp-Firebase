@@ -54,11 +54,19 @@ useEffect(()=>{
       })
         setNewMessages("")
 }
+function alphaFeature() {
+    alert("This feature is currently in Alpha stage")
+}
   return (
     <div className='main d-flex justify-content-center align-items-center bg-dark'>
     <div className=' chatbox d-flex vh-100 flex-column bg-light align-items-center' >
-        <div className='msgs-room px-2 rounded-2 border-bottom'>
-        <h5 className=''>Welcome to Room: {room.toUpperCase()}</h5>
+        <div className='flex-grow-1 flex-nowrap  w-75  align-items-center d-flex justify-content-between msgs-room px-2 rounded-2 border-bottom'>
+        <h5 className=''> Room : {room.toUpperCase()}</h5>
+        <div className=' '>
+        <i onClick={alphaFeature} class="fs-5 px-2 bi bi-telephone-plus text-primary"></i>
+        <i onClick={alphaFeature} class="fs-5 px-2 bi bi-camera-video text-primary"></i>
+        <i onClick={alphaFeature} class="fs-5 px-2 bi bi-info-circle text-primary"></i>
+        </div>
         </div>
         <div className='msgsList bg-light w-100' >
         {messages.map((message )=>{
@@ -83,8 +91,8 @@ useEffect(()=>{
         
 <div ref={forView} className='forView'></div>
         </div>
-        <div className='chatForm' >
-        <form className='w-100' onSubmit={handleSubmit}>
+        <div className='chatForm  ' >
+        <form className='w-100 ' onSubmit={handleSubmit}>
             <input className='w-75  px-2 py-1  rounded-3' onChange={(e)=>{setNewMessages(e.target.value)}} value={newMessages} placeholder='Type your message'/>
             <button className='w-25 px-1 py-1 border border-primary rounded-3' type='submit'>Send</button>
         </form>
