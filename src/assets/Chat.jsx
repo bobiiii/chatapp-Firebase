@@ -53,6 +53,7 @@ useEffect(()=>{
               room
       })
         setNewMessages("")
+        forView.current.scrollIntoView({behavior: "smooth"})
 }
 function alphaFeature() {
     alert("This feature is currently in Alpha stage")
